@@ -18,7 +18,7 @@ elif MODO == 2:
     tamanho = int(input("Tamanho da senha: "))
     PRIMEIRA_CHAVE = str(input("Isira a primeira palavra chave: "))
     SEGUNDA_CHAVE = str(input("Isira a segunda palavra chave: "))
-    numeros = input("Insira os caracteres opcionais: ")
+    numeros = input("Insira os caracteres especiais ou numeros (opcional): ")
     Estrutura = PRIMEIRA_CHAVE + SEGUNDA_CHAVE + numeros
     senha = "".join(random.sample(Estrutura,tamanho))
     print(senha)
