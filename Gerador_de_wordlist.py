@@ -1,3 +1,4 @@
+#!/bin/python3S
 import random
 
 tamanho = int(input("Tamanho da senha: "))
