@@ -10,25 +10,25 @@ Certifique-se de ter o Python instalado em seu sistema.
 
 1. Clone o repositório ou faça o download dos arquivos.
 
-2. Execute o programa `gerador_senhas.py` em um ambiente Python.
+2. Execute o programa `menu.py` em um ambiente Python.
 
 3. Siga as instruções apresentadas no terminal para gerar senhas aleatórias ou wordlists direcionadas.
 
 ## Funções
 
-### `senha_aleatoria()`
+### `Gerador de senhas aleatorias`
 
 Gera uma senha aleatória com base no tamanho especificado pelo usuário.
 
-### `senha_direcionada()`
+### `Gerador de senhas codicionais`
 
 Gera uma senha com base nas palavras-chave fornecidas pelo usuário.
 
-### `gerador_wordlist()`
+### `Gerador de wordlist`
 
 Gera uma wordlist de senhas aleatórias com base no tamanho e na quantidade especificados pelo usuário.
 
-### `gerador_wordlist_direcionada()`
+### `Gerador de wordlist condicional`
 
 Gera uma wordlist de senhas com base nas informações fornecidas pelo usuário.
 
