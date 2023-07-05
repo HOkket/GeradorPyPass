@@ -1,5 +1,4 @@
 #!/bin/python3
-from typing import Match
 from gerador_senha import senha_aleatoria, senha_direcionada, gerador_wordlist
 
 
