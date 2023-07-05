@@ -1,5 +1,5 @@
-#!/bin/python3
 import random
+
 
 def senha_aleatoria():
     if __name__ == "__main__":
@@ -12,21 +12,25 @@ def senha_aleatoria():
         senha = "".join(random.sample(Estrutura, tamanho))
         return senha
 
+
 def senha_direcionada():
     if __name__ == "__main__":
         tamanho = int(input("Tamanho da senha: "))
         PRIMEIRA_CHAVE = input("Insira a primeira palavra chave: ")
         SEGUNDA_CHAVE = input("Insira a segunda palavra chave: ")
-        numeros = input("Insira os caracteres especiais ou números (opcional): ")
+        numeros = input(
+            "Insira os caracteres especiais ou números (opcional): ")
         Estrutura = PRIMEIRA_CHAVE + SEGUNDA_CHAVE + numeros
         senha = "".join(random.sample(Estrutura, tamanho))
         return senha
+
 
 def gerador_wordlist():
     if __name__ == "__main__":
         tamanho = int(input("Tamanho da senha: "))
         quantidade = int(input("Quantas senhas você deseja gerar? "))
-        arquivo = open('wordlist.txt', 'a')  # Abrir o arquivo no modo de adição
+        # Abrir o arquivo no modo de adição
+        arquivo = open('wordlist.txt', 'a')
         contagem = 0
         for i in range(quantidade):
             ALFA = "QWERTYUIOPASDFGHJKLÇZXCVBNM"

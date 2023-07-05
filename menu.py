@@ -1,4 +1,3 @@
-#!/bin/python3
 from gerador_senha import senha_aleatoria, senha_direcionada, gerador_wordlist
 
 
