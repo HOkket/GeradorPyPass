@@ -37,8 +37,3 @@ def gerador_wordlist():
         print("({:.2f}%)".format(porcentagem))
     arquivo.close()  # Fechar o arquivo fora do loop
     print("Finalizado")
-
-
-print(senha_aleatoria())
-print(senha_direcionada())
-gerador_wordlist()
