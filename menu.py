@@ -2,8 +2,9 @@
 import importlib
 import Gerador_de_senha
 
-print("Gerador de senhas aleatorias")
-print("Gerador de senhas codicionais")
+
+print("[1]Gerador de senhas aleatorias")
+print("[2]Gerador de senhas codicionais")
 opcao = int(input())
 
 if opcao == 1:
