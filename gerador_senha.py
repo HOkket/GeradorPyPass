@@ -9,7 +9,8 @@ def senha_aleatoria():
     especial = "!@#$%¨&*()?/}]{[+="
     Estrutura = ALFA + alfa + numeros + especial
     senha = "".join(random.sample(Estrutura, tamanho))
-    print(senha)
+    print("Senha gerada com secesso!")
+    print("Senha: ", senha)
 
 
 def senha_direcionada():
@@ -19,7 +20,8 @@ def senha_direcionada():
     numeros = input("Insira os caracteres especiais ou números (opcional): ")
     Estrutura = PRIMEIRA_CHAVE + SEGUNDA_CHAVE + numeros
     senha = "".join(random.sample(Estrutura, tamanho))
-    print(senha)
+    print("Senha gerada com secesso!")
+    print("Senha: ", senha)
 
 
 def gerador_wordlist():
