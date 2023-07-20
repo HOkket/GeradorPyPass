@@ -28,20 +28,21 @@ def gerador_wordlist():
     tamanho = int(input("Tamanho da senha: "))
     quantidade = int(input("Quantas senhas você deseja gerar? "))
     # Abrir o arquivo no modo de adição
-    arquivo = open('wordlist.txt', 'a')
+    #arquivo = open('wordlist.txt', 'a')
     contagem = 0
-    for i in range(quantidade):
-        ALFA = "QWERTYUIOPASDFGHJKLÇZXCVBNM"
-        alfa = "qwertyuiopasdfghjklçzxcvbnm"
-        numeros = "1234567890"
-        especial = "!@#$%¨&*()?/}]{[+="
-        Estrutura = ALFA + alfa + numeros + especial
-        senha = "".join(random.sample(Estrutura, tamanho))
-        print(senha, file=arquivo)  # Salvar a senha no arquivo
-        contagem += 1
-        porcentagem = (contagem / quantidade) * 100
-        print("({:.2f}%)".format(porcentagem))
-    arquivo.close()  # Fechar o arquivo fora do loop
+    with open('wordlist.txt') as wdlist:
+        for i in range(quantidade):
+            ALFA = "QWERTYUIOPASDFGHJKLÇZXCVBNM"
+            alfa = "qwertyuiopasdfghjklçzxcvbnm"
+            numeros = "1234567890"
+            especial = "!@#$%¨&*()?/}]{[+="
+            Estrutura = ALFA + alfa + numeros + especial
+            senha = "".join(random.sample(Estrutura, tamanho))
+            print(senha, file=wdlist)  # Salvar a senha no arquivo
+            contagem += 1
+            porcentagem = (contagem / quantidade) * 100
+            print("({:.2f}%)".format(porcentagem))
+    #arquivo.close()  # Fechar o arquivo fora do loop
     print("Wordlist Finalizada")
 
 
