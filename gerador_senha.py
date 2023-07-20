@@ -27,20 +27,21 @@ def senha_direcionada():
 def gerador_wordlist():
     tamanho = int(input("Tamanho da senha: "))
     quantidade = int(input("Quantas senhas você deseja gerar? "))
-    # Abrir o arquivo no modo de adição
-    arquivo = open('wordlist.txt', 'a')
+    alfabeto = {
+    "letras": list("abcdefghijklmnopqrstuvwxyz"),
+    "numeros": list("0123456789"),
+    "especiais": list("!@#$%¨&*()?/}]{[+="),
+    }
     contagem = 0
+    senhas = []
     for i in range(quantidade):
-        ALFA = "QWERTYUIOPASDFGHJKLÇZXCVBNM"
-        alfa = "qwertyuiopasdfghjklçzxcvbnm"
-        numeros = "1234567890"
-        especial = "!@#$%¨&*()?/}]{[+="
-        Estrutura = ALFA + alfa + numeros + especial
-        senha = "".join(random.sample(Estrutura, tamanho))
-        print(senha, file=arquivo)  # Salvar a senha no arquivo
+        senha = "".join(random.SystemRandom().choice(alfabeto["especiais", "letras", "numeros"]) for _ in range(tamanho))
+        senhas.append(senhas)
         contagem += 1
         porcentagem = (contagem / quantidade) * 100
         print("({:.2f}%)".format(porcentagem))
+    arquivo = open('wordlist.txt', 'a')
+    print(senha, file=arquivo)  # Salvar a senha no arquivo
     arquivo.close()  # Fechar o arquivo fora do loop
     print("Wordlist Finalizada")
 
@@ -51,11 +52,11 @@ def gerador_wordlist_direcionada():
     # Abrir o arquivo no modo de adição
     arquivo = open('wordlist.txt', 'a')
     contagem = 0
+    Nome = input("Nome do alvo: ")
+    Sobrenome = input("Sobrenome do avlo: ")
+    Data = input("Data de nascimento: ")
+    especial = input("Informação adicional: ")
     for i in range(quantidade):
-        Nome = input("Nome do alvo: ")
-        Sobrenome = input("Sobrenome do avlo: ")
-        Data = input("Data de nascimento: ")
-        especial = input("Informação adicional: ")
         Estrutura = Nome + Sobrenome + Data + especial
         senha = "".join(random.sample(Estrutura, tamanho))
         print(senha, file=arquivo)  # Salvar a senha no arquivo
